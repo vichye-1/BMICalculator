@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet var weightLabel: UILabel!
     @IBOutlet var weightView: UIView!
     @IBOutlet var weightTextField: UITextField!
+    
+    @IBOutlet var privateButton: UIImageView!
     @IBOutlet var randomButton: UIButton!
     @IBOutlet var resultButton: UIButton!
     
@@ -32,6 +34,9 @@ class ViewController: UIViewController {
         configureWeightView()
         configureHeightTextField()
         configureWeightTextField()
+        privateButtonUI()
+        configureRandomButton()
+        configureResultButton()
     }
     
     private func boldLabelUI() {
@@ -69,12 +74,31 @@ class ViewController: UIViewController {
     
     private func configureHeightTextField() {
         heightTextField.borderStyle = .none
+        heightTextField.keyboardType = .numberPad
     }
     
     private func configureWeightTextField() {
         weightTextField.borderStyle = .none
+        weightTextField.keyboardType = .numberPad
     }
     
+    private func privateButtonUI() {
+        privateButton.image = UIImage(systemName: "eye.slash")
+        privateButton.tintColor = .lightGray
+    }
     
+    private func configureRandomButton() {
+        randomButton.setTitle("랜덤으로 BMI 계산하기", for: .normal)
+        randomButton.setTitleColor(.red, for: .normal)
+        randomButton.contentHorizontalAlignment = .right
+        randomButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+    }
     
+    private func configureResultButton() {
+        resultButton.setTitle("결과 확인", for: .normal)
+        resultButton.setTitleColor(.white, for: .normal)
+        resultButton.setTitleColor(.systemPink, for: .highlighted)
+        resultButton.backgroundColor = .purple
+        resultButton.layer.cornerRadius = 15
+    }
 }
