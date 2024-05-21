@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-G6-pT7">
-                                <rect key="frame" x="0.0" y="59" width="223.66666666666666" height="33"/>
+                                <rect key="frame" x="8" y="69" width="223.66666666666666" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vJN-G6-pT7" secondAttribute="height" multiplier="142:21" id="Nui-MG-rho"/>
                                 </constraints>
@@ -27,13 +27,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="yhI-Wd-0Ks">
-                                <rect key="frame" x="231.66666666666663" y="59" width="161.33333333333337" height="242"/>
+                                <rect key="frame" x="239.66666666666663" y="64" width="153.33333333333337" height="230"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yhI-Wd-0Ks" secondAttribute="height" multiplier="1:1.5" id="vQd-n1-q29"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 BMI 지수를 알려드릴게요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igN-Sh-z83">
-                                <rect key="frame" x="0.0" y="100" width="223.66666666666666" height="80"/>
+                                <rect key="frame" x="8" y="102" width="223.66666666666666" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="FrT-6g-sRr"/>
                                 </constraints>
@@ -42,13 +42,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키가 어떻게 되시나요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIU-td-uy0">
-                                <rect key="frame" x="15" y="275" width="208.66666666666666" height="21"/>
+                                <rect key="frame" x="15" y="268" width="216.66666666666666" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qvi-Ej-MOF">
-                                <rect key="frame" x="8" y="301" width="377" height="53"/>
+                                <rect key="frame" x="8" y="294" width="377" height="53"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwj-pi-cBl">
                                         <rect key="frame" x="4" y="4" width="369" height="45"/>
@@ -68,13 +68,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="몸무게는 어떻게 되시나요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0n-jr-jBM">
-                                <rect key="frame" x="15" y="379" width="363" height="21"/>
+                                <rect key="frame" x="15" y="372" width="363" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLa-kE-uce">
-                                <rect key="frame" x="8" y="405" width="377" height="53"/>
+                                <rect key="frame" x="8" y="398" width="377" height="53"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nh6-wA-FHA">
                                         <rect key="frame" x="4" y="4" width="369" height="45"/>
@@ -94,7 +94,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTe-tJ-vrW">
-                                <rect key="frame" x="8" y="468" width="377" height="15"/>
+                                <rect key="frame" x="8" y="461" width="377" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="wyf-Tz-uAy"/>
                                 </constraints>
@@ -103,7 +103,7 @@
                                 <state key="normal" title="랜덤으로 BMI 계산하기"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phC-Qg-m92">
-                                <rect key="frame" x="8" y="523" width="377" height="35"/>
+                                <rect key="frame" x="8" y="516" width="377" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="결과 확인"/>
                             </button>
@@ -114,12 +114,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pLa-kE-uce" secondAttribute="trailing" constant="8" id="2Na-kH-E5b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="phC-Qg-m92" secondAttribute="trailing" constant="8" id="34Y-ah-xJA"/>
                             <constraint firstItem="Qvi-Ej-MOF" firstAttribute="top" secondItem="yhI-Wd-0Ks" secondAttribute="bottom" id="7s6-kx-0lk"/>
-                            <constraint firstItem="igN-Sh-z83" firstAttribute="top" secondItem="vJN-G6-pT7" secondAttribute="bottom" constant="8" id="DVj-sW-beB"/>
+                            <constraint firstItem="igN-Sh-z83" firstAttribute="top" secondItem="vJN-G6-pT7" secondAttribute="bottom" id="DVj-sW-beB"/>
                             <constraint firstItem="DIU-td-uy0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Dji-ad-bUy"/>
                             <constraint firstItem="yhI-Wd-0Ks" firstAttribute="leading" secondItem="DIU-td-uy0" secondAttribute="trailing" constant="8" id="FAc-Uh-ymM"/>
-                            <constraint firstItem="igN-Sh-z83" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gar-ii-LFI"/>
+                            <constraint firstItem="igN-Sh-z83" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Gar-ii-LFI"/>
                             <constraint firstItem="Qvi-Ej-MOF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="JRS-7X-t8h"/>
-                            <constraint firstItem="yhI-Wd-0Ks" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KyF-fn-N7G"/>
+                            <constraint firstItem="yhI-Wd-0Ks" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="KyF-fn-N7G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qvi-Ej-MOF" secondAttribute="trailing" constant="8" id="QlX-OA-ovf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yhI-Wd-0Ks" secondAttribute="trailing" id="UhO-yT-P29"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eTe-tJ-vrW" secondAttribute="trailing" constant="8" id="YDx-zE-mip"/>
@@ -128,8 +128,8 @@
                             <constraint firstItem="T0n-jr-jBM" firstAttribute="top" secondItem="Qvi-Ej-MOF" secondAttribute="bottom" constant="25" id="fNd-NV-iia"/>
                             <constraint firstItem="Qvi-Ej-MOF" firstAttribute="top" secondItem="DIU-td-uy0" secondAttribute="bottom" constant="5" id="ft2-WG-E03"/>
                             <constraint firstItem="phC-Qg-m92" firstAttribute="top" secondItem="eTe-tJ-vrW" secondAttribute="bottom" constant="40" id="hf5-OS-M5f"/>
-                            <constraint firstItem="vJN-G6-pT7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hmt-XW-pe2"/>
-                            <constraint firstItem="vJN-G6-pT7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j9g-JC-vSC"/>
+                            <constraint firstItem="vJN-G6-pT7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="hmt-XW-pe2"/>
+                            <constraint firstItem="vJN-G6-pT7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="j9g-JC-vSC"/>
                             <constraint firstItem="pLa-kE-uce" firstAttribute="top" secondItem="T0n-jr-jBM" secondAttribute="bottom" constant="5" id="r8o-gR-dAC"/>
                             <constraint firstItem="T0n-jr-jBM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="rey-4l-t4d"/>
                             <constraint firstItem="eTe-tJ-vrW" firstAttribute="top" secondItem="pLa-kE-uce" secondAttribute="bottom" constant="10" id="scE-To-PFb"/>
@@ -151,11 +151,13 @@
                         <outlet property="weightLabel" destination="T0n-jr-jBM" id="gHK-ma-6Ll"/>
                         <outlet property="weightTextField" destination="nh6-wA-FHA" id="CZP-bA-GJU"/>
                         <outlet property="weightView" destination="pLa-kE-uce" id="Acd-2B-YSb"/>
+                        <outletCollection property="questionLabels" destination="DIU-td-uy0" collectionClass="NSMutableArray" id="qCI-nU-ifT"/>
+                        <outletCollection property="questionLabels" destination="T0n-jr-jBM" collectionClass="NSMutableArray" id="m7b-0P-LIq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103.125" y="2.112676056338028"/>
+            <point key="canvasLocation" x="189" y="-8"/>
         </scene>
     </scenes>
     <resources>
