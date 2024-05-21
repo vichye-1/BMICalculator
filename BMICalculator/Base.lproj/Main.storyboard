@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMICalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-G6-pT7">
-                                <rect key="frame" x="8" y="30" width="150.5" height="22.5"/>
+                                <rect key="frame" x="8" y="69" width="223.66666666666666" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vJN-G6-pT7" secondAttribute="height" multiplier="142:21" id="Nui-MG-rho"/>
                                 </constraints>
@@ -27,13 +27,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="yhI-Wd-0Ks">
-                                <rect key="frame" x="166.5" y="25" width="153.5" height="230"/>
+                                <rect key="frame" x="239.66666666666663" y="64" width="153.33333333333337" height="230"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yhI-Wd-0Ks" secondAttribute="height" multiplier="1:1.5" id="vQd-n1-q29"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 BMI 지수를 알려드릴게요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igN-Sh-z83">
-                                <rect key="frame" x="8" y="52.5" width="150.5" height="80"/>
+                                <rect key="frame" x="8" y="102" width="223.66666666666666" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="FrT-6g-sRr"/>
                                 </constraints>
@@ -42,16 +42,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="키가 어떻게 되시나요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIU-td-uy0">
-                                <rect key="frame" x="15" y="229" width="143.5" height="21"/>
+                                <rect key="frame" x="15" y="268" width="216.66666666666666" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qvi-Ej-MOF">
-                                <rect key="frame" x="8" y="255" width="304" height="53"/>
+                                <rect key="frame" x="8" y="294" width="377" height="53"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwj-pi-cBl">
-                                        <rect key="frame" x="4" y="4" width="296" height="45"/>
+                                        <rect key="frame" x="4" y="4" width="369" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="5Vw-kC-Jes"/>
                                         </constraints>
@@ -68,39 +68,44 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="몸무게는 어떻게 되시나요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0n-jr-jBM">
-                                <rect key="frame" x="15" y="333" width="290" height="21"/>
+                                <rect key="frame" x="15" y="372" width="363" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLa-kE-uce">
-                                <rect key="frame" x="8" y="359" width="304" height="53"/>
+                                <rect key="frame" x="8" y="398" width="377" height="53"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nh6-wA-FHA">
-                                        <rect key="frame" x="4" y="4" width="296" height="45"/>
+                                        <rect key="frame" x="4" y="4" width="369" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="KzY-NK-jPf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th8-Ak-gcd">
+                                        <rect key="frame" x="334" y="10" width="33" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Th8-Ak-gcd" secondAttribute="height" id="3mg-hr-Gnw"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="eye.slash" catalog="system"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="nh6-wA-FHA" firstAttribute="leading" secondItem="pLa-kE-uce" secondAttribute="leading" constant="4" id="5xF-b2-zWN"/>
                                     <constraint firstAttribute="trailing" secondItem="nh6-wA-FHA" secondAttribute="trailing" constant="4" id="M9b-np-6n6"/>
+                                    <constraint firstItem="Th8-Ak-gcd" firstAttribute="top" secondItem="pLa-kE-uce" secondAttribute="top" constant="10" id="aVc-l1-Kik"/>
+                                    <constraint firstAttribute="trailing" secondItem="Th8-Ak-gcd" secondAttribute="trailing" constant="10" id="fih-ww-aG3"/>
                                     <constraint firstAttribute="bottom" secondItem="nh6-wA-FHA" secondAttribute="bottom" constant="4" id="iqU-Rh-wPI"/>
                                     <constraint firstItem="nh6-wA-FHA" firstAttribute="top" secondItem="pLa-kE-uce" secondAttribute="top" constant="4" id="rjx-Tg-1nA"/>
+                                    <constraint firstAttribute="bottom" secondItem="Th8-Ak-gcd" secondAttribute="bottom" constant="10" id="yPF-e8-qX1"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vwq-Lw-Ejw">
-                                <rect key="frame" x="271" y="369" width="26" height="25.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="vwq-Lw-Ejw" secondAttribute="height" id="zJM-gY-9TB"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTe-tJ-vrW">
-                                <rect key="frame" x="144" y="422" width="160" height="20"/>
+                                <rect key="frame" x="217" y="461" width="160" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eTe-tJ-vrW" secondAttribute="height" multiplier="8:1" id="9A4-Jr-7A6"/>
                                     <constraint firstAttribute="height" constant="20" id="ckA-vf-Lp6"/>
@@ -108,9 +113,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="랜덤으로 BMI 계산하기"/>
+                                <connections>
+                                    <action selector="randomButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ncx-b7-9he"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phC-Qg-m92">
-                                <rect key="frame" x="8" y="482" width="304" height="40"/>
+                                <rect key="frame" x="8" y="521" width="377" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="sHf-uz-bJP"/>
                                 </constraints>
@@ -135,7 +143,6 @@
                             <constraint firstItem="yhI-Wd-0Ks" firstAttribute="leading" secondItem="DIU-td-uy0" secondAttribute="trailing" constant="8" id="FAc-Uh-ymM"/>
                             <constraint firstItem="igN-Sh-z83" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Gar-ii-LFI"/>
                             <constraint firstItem="Qvi-Ej-MOF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="JRS-7X-t8h"/>
-                            <constraint firstItem="vwq-Lw-Ejw" firstAttribute="top" secondItem="pLa-kE-uce" secondAttribute="bottom" constant="-43" id="KnN-lb-fdW"/>
                             <constraint firstItem="yhI-Wd-0Ks" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="KyF-fn-N7G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qvi-Ej-MOF" secondAttribute="trailing" constant="8" id="QlX-OA-ovf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yhI-Wd-0Ks" secondAttribute="trailing" id="UhO-yT-P29"/>
@@ -147,7 +154,6 @@
                             <constraint firstItem="pLa-kE-uce" firstAttribute="top" secondItem="T0n-jr-jBM" secondAttribute="bottom" constant="5" id="r8o-gR-dAC"/>
                             <constraint firstItem="T0n-jr-jBM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="rey-4l-t4d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T0n-jr-jBM" secondAttribute="trailing" constant="15" id="tSJ-86-PyE"/>
-                            <constraint firstItem="pLa-kE-uce" firstAttribute="trailing" secondItem="vwq-Lw-Ejw" secondAttribute="trailing" constant="15" id="vpX-mS-Le1"/>
                             <constraint firstItem="yhI-Wd-0Ks" firstAttribute="leading" secondItem="vJN-G6-pT7" secondAttribute="trailing" constant="8" id="xuL-Aq-v59"/>
                             <constraint firstItem="eTe-tJ-vrW" firstAttribute="top" secondItem="pLa-kE-uce" secondAttribute="bottom" constant="10" id="yaS-sT-GNR"/>
                             <constraint firstItem="phC-Qg-m92" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ybT-uq-fC9"/>
@@ -163,7 +169,7 @@
                         <outlet property="heightTextField" destination="xwj-pi-cBl" id="eDd-Ga-fnz"/>
                         <outlet property="heightView" destination="Qvi-Ej-MOF" id="gTU-hz-eBH"/>
                         <outlet property="imageView" destination="yhI-Wd-0Ks" id="vIK-Ts-hA2"/>
-                        <outlet property="privateButton" destination="vwq-Lw-Ejw" id="D6W-V1-agX"/>
+                        <outlet property="privateButton" destination="Th8-Ak-gcd" id="2og-Od-ydw"/>
                         <outlet property="randomButton" destination="eTe-tJ-vrW" id="6BT-8P-iRY"/>
                         <outlet property="regularLabel" destination="igN-Sh-z83" id="4B5-Ec-tVh"/>
                         <outlet property="resultButton" destination="phC-Qg-m92" id="gXy-si-h6g"/>
@@ -179,12 +185,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="187.5" y="-8.4507042253521121"/>
+            <point key="canvasLocation" x="598" y="-12"/>
         </scene>
     </scenes>
     <resources>
         <image name="eye.slash" catalog="system" width="128" height="95"/>
-        <image name="image" width="147" height="229.5"/>
+        <image name="image" width="147" height="229.33332824707031"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

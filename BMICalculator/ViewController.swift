@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet var weightView: UIView!
     @IBOutlet var weightTextField: UITextField!
     
-    @IBOutlet var privateButton: UIImageView!
+    @IBOutlet var privateButton: UIButton!
+    
     @IBOutlet var randomButton: UIButton!
     @IBOutlet var resultButton: UIButton!
     
@@ -47,6 +48,13 @@ class ViewController: UIViewController {
         view.isUserInteractionEnabled = true
         view.endEditing(true)
     }
+    
+    @IBAction func randomButtonTapped(_ sender: UIButton) {
+        let randomWeight = Int.random(in: 10...200)
+        let randomHeight = Int.random(in: 110...250)
+        heightTextField.text = String(randomHeight)
+        weightTextField.text = String(randomWeight)
+        }
     
     private func boldLabelUI() {
         BoldLabel.text = "BMI Calculator"
@@ -84,15 +92,21 @@ class ViewController: UIViewController {
     private func configureHeightTextField() {
         heightTextField.borderStyle = .none
         heightTextField.keyboardType = .numberPad
+        
+        heightTextField.placeholder = "키를 입력해주세요"
     }
     
     private func configureWeightTextField() {
         weightTextField.borderStyle = .none
         weightTextField.keyboardType = .numberPad
+        weightTextField.isSecureTextEntry = true
+        
+        weightTextField.placeholder = "몸무게를 입력해주세요"
     }
     
     private func privateButtonUI() {
-        privateButton.image = UIImage(systemName: "eye.slash")
+        privateButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+        privateButton.setImage(UIImage(systemName: "eye"), for: .highlighted)
         privateButton.tintColor = .lightGray
     }
     
@@ -104,7 +118,6 @@ class ViewController: UIViewController {
     }
     
     private func configureResultButton() {
-        
         resultButton.setTitle("결과 확인", for: .normal)
         resultButton.setTitleColor(.white, for: .normal)
         resultButton.setTitleColor(.systemPink, for: .highlighted)
@@ -117,8 +130,9 @@ class ViewController: UIViewController {
         let userHeight = heightTextField.text ?? ""
         
         if let doubleWeight = Double(userWeight), let doubleHeight = Double(userHeight) {
-            let BMI = doubleWeight / pow(doubleHeight, 2)
-            let alert = UIAlertController(title: "BMI 지수 공개!", message: "당신의 BMI 지수는 \(BMI)입니다!", preferredStyle: .alert)
+            let BMI = doubleWeight / pow((doubleHeight / 100), 2)
+            let truncateBmi = String(format: "%.2f", BMI)
+            let alert = UIAlertController(title: "BMI 지수 공개", message: "당신의 BMI 지수는 \(truncateBmi)입니다!", preferredStyle: .alert)
             let yes = UIAlertAction(title: "확인", style: .default)
             alert.addAction(yes)
             present(alert, animated: true)
@@ -128,5 +142,12 @@ class ViewController: UIViewController {
             warning.addAction(no)
             present(warning, animated: true)
         }
+    }
+    
+    private func alertError() {
+        let alert = UIAlertController(title: "Error!", message: "정확한 값을 입력하세요", preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "확인", style: .default)
+        alert.addAction(confirm)
+        present(alert, animated: true)
     }
 }
