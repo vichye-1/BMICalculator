@@ -39,6 +39,15 @@ class ViewController: UIViewController {
         configureResultButton()
     }
     
+    @IBAction func returnButtonClicked(_ sender: UIButton) {
+        alertBMI()
+    }
+    
+    @IBAction func keyboadDismiss(_ sender: UITapGestureRecognizer) {
+        view.isUserInteractionEnabled = true
+        view.endEditing(true)
+    }
+    
     private func boldLabelUI() {
         BoldLabel.text = "BMI Calculator"
         BoldLabel.textAlignment = .left
@@ -95,10 +104,29 @@ class ViewController: UIViewController {
     }
     
     private func configureResultButton() {
+        
         resultButton.setTitle("결과 확인", for: .normal)
         resultButton.setTitleColor(.white, for: .normal)
         resultButton.setTitleColor(.systemPink, for: .highlighted)
         resultButton.backgroundColor = .purple
         resultButton.layer.cornerRadius = 15
+    }
+    
+    private func alertBMI() {
+        let userWeight = weightTextField.text ?? ""
+        let userHeight = heightTextField.text ?? ""
+        
+        if let doubleWeight = Double(userWeight), let doubleHeight = Double(userHeight) {
+            let BMI = doubleWeight / pow(doubleHeight, 2)
+            let alert = UIAlertController(title: "BMI 지수 공개!", message: "당신의 BMI 지수는 \(BMI)입니다!", preferredStyle: .alert)
+            let yes = UIAlertAction(title: "확인", style: .default)
+            alert.addAction(yes)
+            present(alert, animated: true)
+        } else {
+            let warning = UIAlertController(title: "숫자만 입력할 수 있습니다!", message: "다시 입력해주세요", preferredStyle: .alert)
+            let no = UIAlertAction(title: "확인", style: .default)
+            warning.addAction(no)
+            present(warning, animated: true)
+        }
     }
 }
