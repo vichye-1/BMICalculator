@@ -13,9 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet var regularLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     
-    
-    @IBOutlet var questionLabels: [UILabel]!
-    
     @IBOutlet var heightLabel: UILabel!
     @IBOutlet var heightView: UIView!
     @IBOutlet var heightTextField: UITextField!
@@ -29,7 +26,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         boldLabelUI()
         regularLabelUI()
-        questionLabelUI()
+        configureHeightLabel()
+        configureWeightLabel()
+        configureHeightView()
+        configureWeightView()
+        configureHeightTextField()
+        configureWeightTextField()
     }
     
     private func boldLabelUI() {
@@ -45,10 +47,34 @@ class ViewController: UIViewController {
         regularLabel.font = UIFont.systemFont(ofSize: 18)
     }
     
-    private func questionLabelUI() {
+    private func configureHeightLabel() {
         heightLabel.text = "키가 어떻게 되시나요?"
-        heightLabel.font = UIFont.systemFont(ofSize: 18)
         heightLabel.textAlignment = .left
     }
+    
+    private func configureWeightLabel() {
+        weightLabel.text = "몸무게는 어떻게 되시나요?"
+        weightLabel.textAlignment = .left
+    }
+    
+    private func configureHeightView() {
+        heightView.layer.borderWidth = 2
+        heightView.layer.cornerRadius = 20
+    }
+    
+    private func configureWeightView() {
+        weightView.layer.borderWidth = 2
+        weightView.layer.cornerRadius = 20
+    }
+    
+    private func configureHeightTextField() {
+        heightTextField.borderStyle = .none
+    }
+    
+    private func configureWeightTextField() {
+        weightTextField.borderStyle = .none
+    }
+    
+    
+    
 }
-

@@ -151,8 +151,6 @@
                         <outlet property="weightLabel" destination="T0n-jr-jBM" id="gHK-ma-6Ll"/>
                         <outlet property="weightTextField" destination="nh6-wA-FHA" id="CZP-bA-GJU"/>
                         <outlet property="weightView" destination="pLa-kE-uce" id="Acd-2B-YSb"/>
-                        <outletCollection property="questionLabels" destination="DIU-td-uy0" collectionClass="NSMutableArray" id="qCI-nU-ifT"/>
-                        <outletCollection property="questionLabels" destination="T0n-jr-jBM" collectionClass="NSMutableArray" id="m7b-0P-LIq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
