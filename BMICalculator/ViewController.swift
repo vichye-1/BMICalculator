@@ -13,9 +13,14 @@ class ViewController: UIViewController {
     @IBOutlet var regularLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     
+    @IBOutlet var nickNameLabel: UILabel!
+    @IBOutlet var nickNameView: UIView!
+    @IBOutlet var nickNameTextField: UITextField!
+    
     @IBOutlet var heightLabel: UILabel!
     @IBOutlet var heightView: UIView!
     @IBOutlet var heightTextField: UITextField!
+    
     @IBOutlet var weightLabel: UILabel!
     @IBOutlet var weightView: UIView!
     @IBOutlet var weightTextField: UITextField!
@@ -29,19 +34,40 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         boldLabelUI()
         regularLabelUI()
-        configureHeightLabel()
+        configureNickNameLabel()
         configureWeightLabel()
+        configureNickNameView()
         configureHeightView()
         configureWeightView()
+        configureNickNameTextField()
         configureHeightTextField()
         configureWeightTextField()
         privateButtonUI()
         configureRandomButton()
         configureResultButton()
+        
+    }
+    
+    @IBAction func regularKeyboardDismiss(_ sender: UITextField) {
     }
     
     @IBAction func returnButtonClicked(_ sender: UIButton) {
+        guard let height = heightTextField.text,
+              let weight = weightTextField.text else {
+            alertError()
+            return
+        }
+        
+        guard height.count < 4 && height.count > 1, weight.count < 4 && weight.count > 1 else {
+            alertError()
+            return
+        }
+        
         alertBMI()
+        
+        UserDefaults.standard.set(nickNameTextField.text, forKey: "nickname")
+        UserDefaults.standard.set(heightTextField.text, forKey: "userHeight")
+        UserDefaults.standard.set(weightTextField.text, forKey: "userWeight")
     }
     
     @IBAction func keyboadDismiss(_ sender: UITapGestureRecognizer) {
@@ -52,9 +78,9 @@ class ViewController: UIViewController {
     @IBAction func randomButtonTapped(_ sender: UIButton) {
         let randomWeight = Int.random(in: 10...200)
         let randomHeight = Int.random(in: 110...250)
-        heightTextField.text = String(randomHeight)
-        weightTextField.text = String(randomWeight)
-        }
+        nickNameTextField.text = String(randomHeight)
+        heightTextField.text = String(randomWeight)
+    }
     
     private func boldLabelUI() {
         BoldLabel.text = "BMI Calculator"
@@ -69,6 +95,13 @@ class ViewController: UIViewController {
         regularLabel.font = UIFont.systemFont(ofSize: 18)
     }
     
+    private func configureNickNameLabel() {
+        nickNameLabel.text = "닉네임이 어떻게 되시나요?"
+        nickNameLabel.textAlignment = .left
+        nickNameLabel.sizeToFit()
+        nickNameLabel.numberOfLines = 1
+    }
+    
     private func configureHeightLabel() {
         heightLabel.text = "키가 어떻게 되시나요?"
         heightLabel.textAlignment = .left
@@ -77,6 +110,11 @@ class ViewController: UIViewController {
     private func configureWeightLabel() {
         weightLabel.text = "몸무게는 어떻게 되시나요?"
         weightLabel.textAlignment = .left
+    }
+    
+    private func configureNickNameView() {
+        nickNameView.layer.borderWidth = 2
+        nickNameView.layer.cornerRadius = 20
     }
     
     private func configureHeightView() {
@@ -89,10 +127,22 @@ class ViewController: UIViewController {
         weightView.layer.cornerRadius = 20
     }
     
+    private func configureNickNameTextField() {
+        let name = UserDefaults.standard.string(forKey: "nickname")
+        nickNameTextField.text = name
+        
+        nickNameTextField.borderStyle = .none
+        nickNameTextField.keyboardType = .default
+        nickNameTextField.placeholder = "닉네임을 입력해주세요"
+    }
+    
     private func configureHeightTextField() {
+        
+        let height = UserDefaults.standard.string(forKey: "userHeight")
+        heightTextField.text = height
+        
         heightTextField.borderStyle = .none
         heightTextField.keyboardType = .numberPad
-        
         heightTextField.placeholder = "키를 입력해주세요"
     }
     
@@ -100,8 +150,9 @@ class ViewController: UIViewController {
         weightTextField.borderStyle = .none
         weightTextField.keyboardType = .numberPad
         weightTextField.isSecureTextEntry = true
-        
         weightTextField.placeholder = "몸무게를 입력해주세요"
+        let weight = UserDefaults.standard.string(forKey: "userWeight")
+        weightTextField.text = weight
     }
     
     private func privateButtonUI() {
@@ -126,8 +177,8 @@ class ViewController: UIViewController {
     }
     
     private func alertBMI() {
-        let userWeight = weightTextField.text ?? ""
-        let userHeight = heightTextField.text ?? ""
+        let userWeight = heightTextField.text ?? ""
+        let userHeight = weightTextField.text ?? ""
         
         if let doubleWeight = Double(userWeight), let doubleHeight = Double(userHeight) {
             let BMI = doubleWeight / pow((doubleHeight / 100), 2)
@@ -150,4 +201,10 @@ class ViewController: UIViewController {
         alert.addAction(confirm)
         present(alert, animated: true)
     }
+    
+    private func resultButtonClicked() {
+        
+    }
 }
+
+
